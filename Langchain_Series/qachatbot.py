@@ -7,6 +7,9 @@ from langchain_core.messages import HumanMessage, AIMessage
 # Load environment variables from .env file
 load_dotenv()
 
+# Get Groq API Key from environment variables
+api_key = os.getenv("GROQ_API_KEY", "")
+
 # -----------------------------
 # Page Configuration
 # -----------------------------
@@ -27,16 +30,6 @@ st.markdown("Learn LangChain basics with Groq's ultra-fast inference!")
 # -----------------------------
 with st.sidebar:
     st.header("⚙️ Settings")
-
-    # Use the environment variable as default value if available
-    default_api_key = os.getenv("GROQ_API_KEY", "")
-
-    api_key = st.text_input(
-        "GROQ_API_KEY",
-        value=default_api_key,
-        type="password",
-        help="Get your free API key from https://console.groq.com"
-    )
 
     model_name = st.selectbox(
         "Select Model",
@@ -74,7 +67,7 @@ def load_llm(api_key, model_name):
 # API Key Check
 # -----------------------------
 if not api_key:
-    st.warning("👈 Please enter your Groq API Key in the sidebar.")
+    st.error("❌ Groq API Key not found! Please set the `GROQ_API_KEY` in your `.env` file to start chatting.")
     st.stop()
 
 try:

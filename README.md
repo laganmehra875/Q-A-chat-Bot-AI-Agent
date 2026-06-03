@@ -2,6 +2,12 @@
 
 Welcome to the **Agentic AI Course** projects repository. This repository contains various AI-powered applications, notebooks, and learning series.
 
+
+```bash
+https://q-a-chat-bot-ai-agent-hjqjzqfdmiwie5xaaxfpyu.streamlit.app/
+```
+
+
 ## 📂 Repository Structure
 
 - **[Langchain_Series](./Langchain_Series/)**: Contains Streamlit-based LangChain Q&A chatbots and basic LangChain notebooks.

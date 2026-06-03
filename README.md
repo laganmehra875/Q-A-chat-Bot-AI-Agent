@@ -2,6 +2,7 @@
 
 Welcome to the **Agentic AI Course** projects repository. This repository contains various AI-powered applications, notebooks, and learning series.
 
+## 🚀 Agent-AI Website
 
 ```bash
 https://q-a-chat-bot-ai-agent-hjqjzqfdmiwie5xaaxfpyu.streamlit.app/

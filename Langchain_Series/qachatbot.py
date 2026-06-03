@@ -7,8 +7,8 @@ from langchain_core.messages import HumanMessage, AIMessage
 # Load environment variables from .env file
 load_dotenv()
 
-# Get Groq API Key from environment variables
-api_key = os.getenv("GROQ_API_KEY", "")
+# Get Groq API Key from Streamlit secrets or environment variables
+api_key = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY", ""))
 
 # -----------------------------
 # Page Configuration
